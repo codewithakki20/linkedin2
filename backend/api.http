@@ -1,0 +1,64 @@
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+    "username": "ankit01",
+    "password": "hello",
+    "email": "ankit@patel.com",
+    "name": "ankit"
+}
+
+###
+
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+    "email": "ankit@patel.com",
+    "password": "hello"
+}
+
+
+###
+                                                
+GET http://localhost:8080/api/users/get_user_and_profile
+Content-Type: application/json
+
+{
+    "token": "0c6fde67fbb4bf6a2f40310cf812206aef24f397f96d5f256991c189ecfad5ec"
+}
+
+
+###
+
+POST http://localhost:8080/api/users/update_profile_data
+Content-Type: application/json
+
+{
+    "token": "612e852d90979b0293dffc440116c0f7023b5af3603acf1c6067647b0d3aee37",
+    "bio": "This is a randomly generated bio.",
+    "currentPost": "Software Developer at Tech Inc.",
+    "pastWork": [
+        {
+            "company": "DevWorks",
+            "position": "CTO",
+            "years": "2+"
+        } 
+    ],
+    "education": [
+        {
+            "school": "St Joseph",
+            "degree": "BSc in Computer Science",
+            "fieldOfStudy": "2021"
+        }
+    ]
+}
+
+###
+
+GET http://localhost:8080/api/users//get_all_users
+Content-Type: application/json
+
+{
+    "token": "8717754a4fcea21d690e38089a20659222fb4cab1f625008fa86ebe77defbac6"
+}
